@@ -20,15 +20,15 @@ const Home: NextPage = () => {
     const geometry = new THREE.BufferGeometry()
 
     
-    const sideLength = 10
+    const sideLength = 12
     const posArray = new Float32Array((sideLength * sideLength * sideLength) * 3)
     let i = 0
     for ( let x = 0; x < sideLength; x += 1 ) {
       for ( let y = 0; y < sideLength; y += 1){
         for (let z = 0; z < sideLength; z += 1){
-          posArray[i] = x
-          posArray[i+1] = y 
-          posArray[i+2] = z
+          posArray[i] = x - (sideLength/2)
+          posArray[i+1] = y - (sideLength/2)
+          posArray[i+2] = z - (sideLength/2)
           i += 3
         }
       }
@@ -39,8 +39,7 @@ const Home: NextPage = () => {
 
     var material = new THREE.PointsMaterial({size: 0.005})
     var cube = new THREE.Points( geometry, material );
-    const gridHelper = new THREE.GridHelper(200, 50)
-    scene.add( cube, gridHelper );
+    scene.add( cube );
     camera.position.x = 0
     camera.position.y = 0
     camera.position.z = 30
@@ -49,9 +48,8 @@ const Home: NextPage = () => {
     var animate = function () {
       requestAnimationFrame( animate );
       
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
       cube.rotation.z += 0.01;
+      cube.rotation.y += 0.01;
      controls.update()
       renderer.render( scene, camera );
     };
