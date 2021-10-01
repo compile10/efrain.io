@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
-import * as THREE from "three";
 import  {useEffect } from 'react';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { Box, Heading } from "@chakra-ui/react"
 
+import * as THREE from "three";
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 
 const Home: NextPage = () => {
@@ -42,14 +43,16 @@ const Home: NextPage = () => {
     scene.add( cube );
     camera.position.x = 0
     camera.position.y = 0
-    camera.position.z = 30
+    camera.position.z = 16
+
+    cube.position.x = -6
     
     //animate
     var animate = function () {
       requestAnimationFrame( animate );
       
-      cube.rotation.z += 0.01;
-      cube.rotation.y += 0.01;
+      cube.rotation.x += 0.005;
+      cube.rotation.y += 0.005;
      controls.update()
       renderer.render( scene, camera );
     };
@@ -57,7 +60,11 @@ const Home: NextPage = () => {
     
   });
   return (
-    <></>
+    <Box position="absolute" width="100%" top={80}>
+      <Box display="grid" justifyItems="end" padding={[2, 2, 20]}>
+        <Heading color='white'>Welcome to my website.</Heading>
+      </Box>
+    </Box>
   )
 }
 
