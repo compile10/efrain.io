@@ -72,17 +72,17 @@ const Home: NextPage = () => {
           <Heading color='white' >Welcome to my website.</Heading>
           <ButtonGroup variant="outline" spacing="3" paddingTop={3}>
             <Link  href={'https://github.com/compile10'} isExternal>
-              <Button leftIcon={<GoMarkGithub />} >
+              <Button color='white' leftIcon={<GoMarkGithub />} >
                 Github
               </Button>
             </Link>
             <Link href={'https://www.linkedin.com/in/efrain800/'} isExternal>
-              <Button leftIcon={<FaLinkedin />} >
+              <Button color='white' leftIcon={<FaLinkedin />} >
                 LinkedIn
               </Button>
             </Link>
             <Link href={'https://efrain800.medium.com/'} isExternal>
-              <Button leftIcon={<FaMedium />} >
+              <Button color='white' leftIcon={<FaMedium />} >
                 Medium
               </Button>
             </Link>
