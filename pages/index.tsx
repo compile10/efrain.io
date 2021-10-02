@@ -5,7 +5,7 @@ import { Button, ButtonGroup } from "@chakra-ui/react"
 import { Link } from "@chakra-ui/react"
 
 import * as THREE from "three";
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+//import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 import { GoMarkGithub } from "react-icons/go";
 import { FaLinkedin, FaMedium } from "react-icons/fa";
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
-    const controls = new OrbitControls(camera, renderer.domElement)
+    //const controls = new OrbitControls(camera, renderer.domElement)
 
 
     //set up objects
@@ -39,7 +39,6 @@ const Home: NextPage = () => {
         }
       }
     }
-    console.log(posArray)
     geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3))
 
 
@@ -58,7 +57,7 @@ const Home: NextPage = () => {
       
       cube.rotation.x += 0.005;
       cube.rotation.y += 0.005;
-     controls.update()
+      //controls.update()
       renderer.render( scene, camera );
     };
     animate();
