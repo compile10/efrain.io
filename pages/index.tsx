@@ -3,6 +3,8 @@ import  {useEffect } from 'react';
 import { Box, Heading } from "@chakra-ui/react"
 import { Button, ButtonGroup } from "@chakra-ui/react"
 import { Link } from "@chakra-ui/react"
+import Head from 'next/head'
+
 
 import * as THREE from "three";
 //import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
@@ -66,6 +68,10 @@ const Home: NextPage = () => {
 
 
   return (
+    <>
+    <Head>
+    <title>efrain.io</title>
+    </Head>
     <Box position="absolute" width="100%" top={80}>
       <Box display="grid" justifyItems="end" padding={[2, 2, 20]}>
         <Box display="grid" justifyItems="center">
@@ -91,6 +97,7 @@ const Home: NextPage = () => {
 
       </Box>
     </Box>
+    </>
   )
 }
 
