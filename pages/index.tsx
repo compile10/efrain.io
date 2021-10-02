@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     const geometry = new THREE.BufferGeometry()
 
     
-    const sideLength = 12
+    const sideLength = 10
     const posArray = new Float32Array((sideLength * sideLength * sideLength) * 3)
     let i = 0
     for ( let x = 0; x < sideLength; x += 1 ) {
@@ -48,10 +48,10 @@ const Home: NextPage = () => {
     var cube = new THREE.Points( geometry, material );
     scene.add( cube );
     camera.position.x = 0
-    camera.position.y = 0
-    camera.position.z = 16
+    camera.position.y = -1
+    camera.position.z = 12
 
-    cube.position.x = -6
+    cube.position.x = -4
     
     //animate
     var animate = function () {
