@@ -70,7 +70,7 @@ const Home: NextPage = () => {
       <Box display="grid" justifyItems="end" padding={[2, 2, 20]}>
         <Box display="grid" justifyItems="center">
           <Heading color='white' >Welcome to my website.</Heading>
-          <ButtonGroup colorScheme="white" variant="outline" spacing="3" paddingTop={3}>
+          <ButtonGroup variant="outline" spacing="3" paddingTop={3}>
             <Link  href={'https://github.com/compile10'} isExternal>
               <Button leftIcon={<GoMarkGithub />} >
                 Github
