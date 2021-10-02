@@ -57,8 +57,8 @@ const Home: NextPage = () => {
     var animate = function () {
       requestAnimationFrame( animate );
       
-      cube.rotation.x += 0.005;
-      cube.rotation.y += 0.005;
+      cube.rotation.x += 0.002;
+      cube.rotation.y += 0.002;
       //controls.update()
       renderer.render( scene, camera );
     };
