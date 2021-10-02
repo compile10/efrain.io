@@ -17,7 +17,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     //Set up canvas
     var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+    var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 1, 3000 );
     var renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.body.appendChild( renderer.domElement );
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     const geometry = new THREE.BufferGeometry()
 
     
-    const sideLength = 5
+    const sideLength = 12
     const posArray = new Float32Array((sideLength * sideLength * sideLength) * 3)
     let i = 0
     for ( let x = 0; x < sideLength; x += 1 ) {
