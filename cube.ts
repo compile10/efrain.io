@@ -45,7 +45,7 @@ export function renderCube(){
 
         //
 
-        const material = new THREE.PointsMaterial( { size: 0.005} );
+        const material = new THREE.PointsMaterial( { size: 0.02} );
 
         points = new THREE.Points( geometry, material );
         points.position.x = -6
