@@ -22,7 +22,10 @@ const Home: NextPage = () => {
   return (
     <>
     <Head>
-    <title>efrain.io</title>
+      <title>efrain.io</title>
+      <meta property="og:title" content="efrain.io" />
+      <meta property="og:description" content="The personal website of Efrain Gonzalez." />
+      <meta property="og:image" content="https://i.imgur.com/RPZ1vel.png" />
     </Head>
     <Box position="absolute" width="100%" top={80}>
       <Box display="grid" justifyItems="end" padding={[2, 2, 20]}>
