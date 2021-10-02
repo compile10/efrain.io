@@ -88,8 +88,8 @@ export function renderCube(){
 
         const time = Date.now() * 0.001;
 
-       // points.rotation.x = time * 0.25;
-       // points.rotation.y = time * 0.5;
+       points.rotation.x = time * 0.25;
+       points.rotation.y = time * 0.5;
 
         renderer.render( scene, camera );
 
