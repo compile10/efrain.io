@@ -28,9 +28,9 @@ const Home: NextPage = () => {
       <meta property="og:image" content="https://i.imgur.com/M2TTYBf.png" />
     </Head>
     <Box position="absolute" width="100%" top={80}>
-      <Box display="grid" justifyItems="end" padding={[2, 2, 20]}>
+      <Box display="grid" justifyItems="end" marginRight={[2, 2, 40]}>
         <Box display="grid" justifyItems="center">
-          <Heading color='white' >Welcome to my website.</Heading>
+          <Heading color='white' >Welcome to efrain.io</Heading>
           <ButtonGroup variant="outline" spacing="3" paddingTop={3}>
             <Link  href={'https://github.com/compile10'} isExternal>
               <Button _hover={{ color: "black", backgroundColor: "white" }} color='white' leftIcon={<GoMarkGithub />} >
