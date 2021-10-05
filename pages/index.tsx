@@ -28,8 +28,8 @@ const Home: NextPage = () => {
       <meta property="og:image" content="https://i.imgur.com/M2TTYBf.png" />
     </Head>
     <Box position="absolute" width="100%" top={80}>
-      <Box display="grid" justifyItems="end" marginRight={[2, 2, 40]}>
-        <Box display="grid" justifyItems="center">
+      <Box display="grid" justifyItems={["center","end"]} marginRight={[0, 10, 20, 40]}  >
+        <Box display="grid" justifyItems="center" padding={[5,0]}>
           <Heading color='white' >Welcome to efrain.io</Heading>
           <ButtonGroup variant="outline" spacing="3" paddingTop={3}>
             <Link  href={'https://github.com/compile10'} isExternal>
